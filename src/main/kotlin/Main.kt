@@ -5,8 +5,8 @@ import java.io.InputStream
 class Main {
     companion object {
 
-        private const val pathReader = "PATH_READER"
-        private const val pathWriting = "PATH_WRITING"
+        private const val pathReader = "C:\\Users\\gabri\\Documents\\Projetos\\export-cities\\src\\main\\resources\\cities.json"
+        private const val pathWriting = "C:\\Users\\gabri\\Documents\\Projetos\\export-cities\\src\\main\\resources\\citiesExport.txt"
 
         private var states: StatesModel? = null
 
@@ -24,9 +24,9 @@ class Main {
 
         private fun writingFile() {
             val file = File(pathWriting)
-            for (states in states!!.states) {
-                for (city in states.cities) {
-                    file.appendText("\n"+city + "/" + states.initial+",")
+            for (state in states!!.states) {
+                for (city in state.cities) {
+                    file.appendText("\n"+city + "/" + state.uf + ",")
                 }
             }
 
