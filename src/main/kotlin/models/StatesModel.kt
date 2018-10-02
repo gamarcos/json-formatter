@@ -1,0 +1,1 @@
+class StatesModel(val states: ArrayList<CitiesModel>)

@@ -1,0 +1,1 @@
+class CitiesModel(val initial: String, val name: String, val cities: ArrayList<String>)
